@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nalfonso <nalfonso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/30 18:12:02 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/06/30 20:04:09 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/07/01 23:21:06 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,17 +59,11 @@ int main()
 		std::getline(std::cin, input);
 		
 		if (input == "ADD")
-		{
 			std::cout << "Adding..\n";
-		}
-		if (input == "SEARCH")
-		{
+		else if (input == "SEARCH")
 			std::cout << "Searching..\n";
-		}
-		if (input == "EXIT")
-		{
+		else if (input == "EXIT")
 			break ;
-		}
 		else
 			std::cout << "Unknown command\n";
 	}

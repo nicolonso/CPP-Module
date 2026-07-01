@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/06/28 16:16:28 by nalfonso          #+#    #+#             */
+/*   Updated: 2026/06/28 16:18:03 by nalfonso         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 # include <iostream>
 
@@ -30,3 +41,11 @@ int main(int ac, char **av)
 
 // It doesnt matter th number of arguments i have i need to print all in upper case
 // Forthis step ican create a function that allow me to make this 
+
+/*
+--------------------------------------------------------------------------
+
+	Note *Missing makefile*
+	
+	Implematation of for loop -> Why -> 
+*/
