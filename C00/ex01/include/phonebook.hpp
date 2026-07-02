@@ -3,6 +3,7 @@
 
 # include <string>
 # include <iostream>
+# include "contact.hpp"
 
 class Phonebook
 {
@@ -14,14 +15,5 @@ class Phonebook
 		void	addContact();
 		void	search() const;
 };
-
-Phonebook::phonebook(/* args */)
-{
-}
-
-Phonebook::~phonebook()
-{
-}
-
 
 #endif
