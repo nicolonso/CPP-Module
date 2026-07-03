@@ -3,12 +3,13 @@
 
 # include <string>
 # include <iostream>
+# include <iomanip>
 # include "contact.hpp"
 
 class PhoneBook
 {
 	private:
-		Contact 	contacs[8];
+		Contact 	contacts[8];
 		int 		count;	
 	public:
 		PhoneBook();

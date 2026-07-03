@@ -6,7 +6,7 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/02 22:21:08 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/07/02 22:34:22 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/07/03 21:31:16 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Contact
 		std::string darkSecret;
 	public:
 		void	set(std::string first, std::string last, std::string nick,
-					std::string phone, std::string secret);
+					std::string ph, std::string secret);
 		std::string getFirstName() const;
 		std::string getLastName() const;
 		std::string getNickName() const;
