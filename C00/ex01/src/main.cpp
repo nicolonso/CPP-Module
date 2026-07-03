@@ -6,7 +6,7 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/01 23:26:06 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/07/02 22:36:21 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/07/03 21:20:59 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main()
 {
 	std:: string input;
-	Phonebook	pb;
+	PhoneBook	pb;
 
 	while(1)
 	{

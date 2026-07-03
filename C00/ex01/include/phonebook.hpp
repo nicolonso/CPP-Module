@@ -5,13 +5,13 @@
 # include <iostream>
 # include "contact.hpp"
 
-class Phonebook
+class PhoneBook
 {
 	private:
 		Contact 	contacs[8];
 		int 		count;	
 	public:
-		Phonebook();
+		PhoneBook();
 		void	addContact();
 		void	search() const;
 };

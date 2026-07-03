@@ -3,17 +3,11 @@
 /*                                                        :::      ::::::::   */
 /*   phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nalfonso <nalfonso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/30 18:10:55 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/06/30 18:12:47 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/07/03 21:16:07 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-
-int main(void)
-{
-	
-	return (0);
-}
