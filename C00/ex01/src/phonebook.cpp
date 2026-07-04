@@ -6,7 +6,7 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/30 18:10:55 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/07/03 22:44:56 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/07/04 11:58:41 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void PhoneBook::search() const
 		std::cout << "Phonebook is empty." << std::endl;
 		return ;
 	}
-	std::cout << "|		index | First Name | Last name | Nickname|" << std::endl;
+	std::cout << "| index | First Name | Last name | Nickname|" << std::endl;
 	for (int i = 0; i < count; i++)
 	{
 		std::cout << "|" << std::right << std::setw(10) << i;
