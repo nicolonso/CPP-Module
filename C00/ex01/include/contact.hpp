@@ -6,15 +6,17 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/02 22:21:08 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/07/03 21:31:16 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/07/09 21:23:30 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # ifndef CONTACT_HPP
 # define CONTACT_HPP
 
+/* ── system includes ──────────────────────────────── */
 # include <string>
 
+/* ── Classes ──────────────────────────────── */
 class Contact
 {
 	private:
