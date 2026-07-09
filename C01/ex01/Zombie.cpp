@@ -1,22 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Acount.cpp                                         :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/09 21:19:50 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/07/09 22:54:17 by nalfonso         ###   ########.fr       */
+/*   Created: 2026/07/09 22:50:35 by nalfonso          #+#    #+#             */
+/*   Updated: 2026/07/09 22:50:36 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Account.hpp"
-
-
-/* ── Private Functions ──────────────────────────────── */
-
-void Account::
-
-/* ── public Functions ──────────────────────────────── */
-
-std::string getNbaccounts( void ) const {return  _nbAccounts} ;

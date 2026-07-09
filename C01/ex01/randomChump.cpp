@@ -1,22 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Acount.cpp                                         :+:      :+:    :+:   */
+/*   randomChump.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/09 21:19:50 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/07/09 22:54:17 by nalfonso         ###   ########.fr       */
+/*   Created: 2026/07/09 22:50:30 by nalfonso          #+#    #+#             */
+/*   Updated: 2026/07/09 22:50:31 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Account.hpp"
-
-
-/* ── Private Functions ──────────────────────────────── */
-
-void Account::
-
-/* ── public Functions ──────────────────────────────── */
-
-std::string getNbaccounts( void ) const {return  _nbAccounts} ;
