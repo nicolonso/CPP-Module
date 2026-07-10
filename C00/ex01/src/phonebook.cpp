@@ -6,7 +6,7 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/30 18:10:55 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/07/04 11:58:41 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/07/10 23:18:37 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ void PhoneBook::addContact()
 	std::string first, last, nick, ph, secret;
 
 	std::cout << "First name: ";
-	std::getline(std::cin, first);
+	std::cin >> first;
+	//std::getline(std::cin, first);
 	std::cout << "Last Name: ";
 	std::getline(std::cin, last);
 	std::cout << "Nick name: ";
