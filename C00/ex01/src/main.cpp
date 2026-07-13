@@ -6,7 +6,7 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/01 23:26:06 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/07/10 23:12:33 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/07/10 23:22:31 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,5 @@ int main()
 	}
 	return 0;
 }
+
+// Check function Search 

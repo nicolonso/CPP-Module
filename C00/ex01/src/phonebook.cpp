@@ -6,7 +6,7 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/30 18:10:55 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/07/10 23:18:37 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/07/12 15:51:43 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,17 @@ void PhoneBook::addContact()
 	std::cin >> first;
 	//std::getline(std::cin, first);
 	std::cout << "Last Name: ";
-	std::getline(std::cin, last);
+	std::cin >> last;
+	//std::getline(std::cin, last);
 	std::cout << "Nick name: ";
-	std::getline(std::cin, nick);
+	std::cin >> nick;
+	//std::getline(std::cin, nick);
 	std::cout << "Phone number: ";
-	std::getline(std::cin, ph);
+	std::cin >> ph;
+	//std::getline(std::cin, ph);
 	std::cout << "Darkest secret: ";
-	std::getline(std::cin, secret);
+	std::cin >> secret;
+	//std::getline(std::cin, secret);
 
 	int index =  count % 8;
 	contacts[index].set(first, last, nick, ph, secret);
@@ -55,7 +59,7 @@ void PhoneBook::search() const
 		std::cout << "Phonebook is empty." << std::endl;
 		return ;
 	}
-	std::cout << "| index | First Name | Last name | Nickname|" << std::endl;
+	std::cout << "|   index  |First Name| Last name| Nickname |" << std::endl;
 	for (int i = 0; i < count; i++)
 	{
 		std::cout << "|" << std::right << std::setw(10) << i;
@@ -68,7 +72,8 @@ void PhoneBook::search() const
 	int			index;
 	
 	std::cout << "Enter index: ";
-	std::getline(std::cin, input);
+	std::cin >> input;
+	//std::getline(std::cin, input);
 	std::stringstream ss(input);
 	if (!(ss >> index) ||  index < 0 || index >= count)
 	{
