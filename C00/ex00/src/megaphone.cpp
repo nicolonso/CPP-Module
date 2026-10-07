@@ -6,7 +6,7 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/28 16:16:28 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/06/28 16:18:03 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/10/07 22:04:26 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,12 @@ int main(int ac, char **av)
 	std::cout << std::endl;
 	return 0;
 }
+
+/* int main(int ac, char *av)
+{
+	if (ac == 1)
+		return (std::cout << "* LOUD and UNBEARABLE FEEDBACK NOISE *" << std::endl, 0);
+} */
 
 // Logic 
 
