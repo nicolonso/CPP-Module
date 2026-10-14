@@ -2,14 +2,10 @@
 
 NAME = megaphone
 
-# Directories
-
-HDR			= 	include/
-
 # Compiler
 
 CXXFLAGS 	= -std=c++98 -Wall -Wextra -Werror
-CXX 		= g++
+CXX 		= c++
 RM			= rm -f
 
 # Source Files
@@ -30,7 +26,7 @@ $(OBJ_DIR)%.o: $(SRC_DIR)%.cpp
 			@$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-			@$(RM) -r $(OBJ_DIR)
+			@$(RM) -r $(OBJ)
 
 fclean:		clean
 			@$(RM) $(NAME)
