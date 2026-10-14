@@ -5,8 +5,6 @@ NAME = megaphone
 # Directories
 
 HDR			= 	include/
-SRC_DIR		=	src/
-OBJ_DIR		=	obj/
 
 # Compiler
 
@@ -15,11 +13,11 @@ CXX 		= g++
 RM			= rm -f
 
 # Source Files
-SRC			=	$(SRC_DIR)megaphone.cpp
+SRC			=	megaphone.cpp
 
 # Object files
 
-OBJ			= $(patsubst $(SRC_DIR)%.cpp,$(OBJ_DIR)%.o, $(SRC))
+OBJ			= $(SRC:.cpp=.o)
 
 all: $(NAME)
 
