@@ -20,29 +20,20 @@ void PhoneBook::addContact()
 
 	std::cout << "First name: ";
 	std::cin >> first;
-	//std::getline(std::cin, first);
 	std::cout << "Last Name: ";
 	std::cin >> last;
-	//std::getline(std::cin, last);
 	std::cout << "Nick name: ";
 	std::cin >> nick;
-	//std::getline(std::cin, nick);
 	std::cout << "Phone number: ";
 	std::cin >> ph;
-	//std::getline(std::cin, ph);
 	std::cout << "Darkest secret: ";
 	std::cin >> secret;
-	//std::getline(std::cin, secret);
 
 	int index =  count % 8;
 	contacts[index].set(first, last, nick, ph, secret);
 	if (count < 8)
 		count++;
 }
-
-//std::cout << std::right << std::setw(10) << "hello";
-
-// I need implement setw helper
 
 static void printField(const std::string &str)
 {
@@ -73,7 +64,6 @@ void PhoneBook::search() const
 	
 	std::cout << "Enter index: ";
 	std::cin >> input;
-	//std::getline(std::cin, input);
 	std::stringstream ss(input);
 	if (!(ss >> index) ||  index < 0 || index >= count)
 	{
@@ -87,4 +77,3 @@ void PhoneBook::search() const
 	std::cout << "Phone number	: " << contacts[index].getPhone() << std::endl;
 	std::cout << "Darkest secret: " << contacts[index].getDarkSecret() << std::endl;
 }
-

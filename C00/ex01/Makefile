@@ -19,8 +19,6 @@ RM 					= rm -f
 SRC						= $(SRC_DIR)main.cpp \
 						  $(SRC_DIR)phonebook.cpp \
 						  $(SRC_DIR)contact.cpp \
-						  $(SRC_DIR)parse.cpp
-
 # Apply pattern
 
 OBJ						= $(patsubst $(SRC_DIR)%.cpp, $(OBJ_DIR)%.o,$(SRC))

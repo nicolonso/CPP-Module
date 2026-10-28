@@ -20,7 +20,6 @@ int main()
 	while(1)
 	{
 		std::cout << "> ";
-		//std::getline(std::cin, input);
 		std::cin >> input;
 		
 		if (input == "ADD")
@@ -34,5 +33,3 @@ int main()
 	}
 	return 0;
 }
-
-// Check function Search 
