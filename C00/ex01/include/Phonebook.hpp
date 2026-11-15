@@ -3,22 +3,24 @@
 
 // Libraries
 
+# include "Contact.hpp"
+# include <sstream>
 # include <iostream>
 # include <iomanip>
 # include <string>
-# include "Contact.hpp"
 
-class Phonebook
+class PhoneBook
 {
 	private:
 		Contact		contact[8];
 		int			count;
+		int			oldest;
+		void		helper() const;
 
 	public:
-		Phonebook();
+		PhoneBook();
 		void	addContact();
-		void	search() const; // const give access to only read the memory not modify
+		void	search() const;
 };
-
 
 #endif

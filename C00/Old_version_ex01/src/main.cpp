@@ -6,7 +6,7 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/01 23:26:06 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/07/10 23:22:31 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/11/15 19:22:45 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main()
 	while(1)
 	{
 		std::cout << "> ";
-		//std::getline(std::cin, input);
+		std::getline(std::cin, input);
 		std::cin >> input;
 		
 		if (input == "ADD")
