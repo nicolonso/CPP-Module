@@ -21,7 +21,7 @@ $(NAME):	$(OBJ)
 			@$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 			@echo "Megaphone Compiled"
 
-$(OBJ_DIR)%.o: $(SRC_DIR)%.cpp
+			%.o: %.cpp
 			@mkdir -p $(@D)
 			@$(CXX) $(CXXFLAGS) -c $< -o $@
 
