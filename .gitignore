@@ -1,2 +1,4 @@
 
 GUIDE/
+*.o
+obj/

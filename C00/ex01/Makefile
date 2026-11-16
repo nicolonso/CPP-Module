@@ -17,7 +17,7 @@ RM 					= rm -f
 # Source files
 
 SRC						= $(SRC_DIR)main.cpp \
-						  $(SRC_DIR)Phonebook.cpp \
+						  $(SRC_DIR)PhoneBook.cpp \
 						  $(SRC_DIR)Contact.cpp \
 
 # Apply pattern

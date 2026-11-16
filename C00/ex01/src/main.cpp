@@ -6,11 +6,11 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/15 18:03:33 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/11/15 19:36:34 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/11/16 20:26:42 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Phonebook.hpp"
+# include "PhoneBook.hpp"
 
 int main()
 {
@@ -19,6 +19,8 @@ int main()
 	
 	while (1)
 	{
+		std::cout << "---------------|  COMMANDS  |---------------" << std::endl;
+		std::cout << "|     ADD      |  SEARCH    |     EXIT     |" << std::endl;
 		std::cout << "> ";
 		if (!(std::getline(std::cin, input)))
 			break ;

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Phonebook.cpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 20:14:40 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/11/15 23:00:37 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/11/16 20:26:37 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Phonebook.hpp"
+# include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook()	: count(0) {} // Review later this Initialization
+PhoneBook::PhoneBook()	: count(0), oldest(0) {}
 
 static int input_verification(std::string &str, std::string prompt)
 {
@@ -23,7 +23,7 @@ static int input_verification(std::string &str, std::string prompt)
 	{
 		if (!(std::getline(std::cin, input)) )
 			return (1);
-		if (input.empty())
+		if (input.empty() )
 		{
 			std::cout << "Incorrect input try again." << std::endl;
 			std::cout << prompt;
@@ -39,7 +39,6 @@ static int input_verification(std::string &str, std::string prompt)
 void PhoneBook::addContact()
 {
 	std::string first, last, nick, ph, secret;
-	int index = 0;
 
 	std::cout << "First name: ";
 	if (input_verification(first, "First name: ") == 1)
@@ -57,10 +56,10 @@ void PhoneBook::addContact()
 	if (input_verification(secret, "Dark secret: ") == 1)
 		return ;
 
-	contact[index].set(first,last, nick, ph, secret);
+	contact[oldest].set(first,last, nick, ph, secret);
+	oldest = (oldest + 1) % 8;
 	if (count < 8)
 		count++;
-	index = (count + 1) % 8;
 }
 
 static void printField(const std::string &str) // Why in this scenario I nee to use the &
@@ -84,7 +83,7 @@ void PhoneBook::helper() const
 	
 	if (!(ss >> index) || index < 0 || index >= count)
 	{
-		std::cout << "Invalid index: " << std::endl;
+		std::cout << "Invalid index" << std::endl;
 		return ;
 	}
 
