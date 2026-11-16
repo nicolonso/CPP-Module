@@ -6,7 +6,7 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 20:14:40 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/11/16 20:26:37 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/11/16 20:58:16 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void PhoneBook::addContact()
 		count++;
 }
 
-static void printField(const std::string &str) // Why in this scenario I nee to use the &
+static void printField(const std::string &str)
 {
 	if (str.length() > 10)
 		std::cout << "|" << str.substr(0,9) << ".";
@@ -71,7 +71,7 @@ static void printField(const std::string &str) // Why in this scenario I nee to 
 }
 
 
-void PhoneBook::helper() const
+void PhoneBook::displayContact() const
 {
 	std::string input;
 	int			index;
@@ -110,6 +110,6 @@ void PhoneBook::search() const
 		printField(contact[i].getNickName());
 		std::cout << "|" << std::endl;
 	}
-	helper();
+	displayContact();
 }
 

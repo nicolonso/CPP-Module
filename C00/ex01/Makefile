@@ -1,6 +1,6 @@
 # Standard Makefile
 
-NAME = phonebook
+NAME = PhoneBook
 
 # Directories
 
@@ -10,15 +10,15 @@ OBJ_DIR				= obj/
 
 # Compiler and Flags
 
-CC					= c++
-CFLAGS				= -Wall -Wextra -Werror -std=c++98 -I$(INCLUDE)
+CXX					= c++
+CXXFLAGS			= -Wall -Wextra -Werror -std=c++98 -I$(INCLUDE)
 RM 					= rm -f
 
 # Source files
 
 SRC						= $(SRC_DIR)main.cpp \
 						  $(SRC_DIR)PhoneBook.cpp \
-						  $(SRC_DIR)Contact.cpp \
+						  $(SRC_DIR)Contact.cpp
 
 # Apply pattern
 
@@ -29,7 +29,7 @@ OBJ						= $(patsubst $(SRC_DIR)%.cpp, $(OBJ_DIR)%.o,$(SRC))
 all:					$(NAME)
 
 $(NAME):				$(OBJ)
-						@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+						@$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 						@echo "Phonebook compiled"
 
 # Compile objects files from source files
@@ -37,7 +37,7 @@ $(NAME):				$(OBJ)
 
 $(OBJ_DIR)%.o:			$(SRC_DIR)%.cpp
 						@mkdir -p $(OBJ_DIR)
-						@$(CC) $(CFLAGS) -c $< -o $@
+						@$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 						@$(RM) -r $(OBJ_DIR)
@@ -49,4 +49,4 @@ re:						fclean all
 
 # Phony targets
 
-.PHONY:					start all clean fclean re
+.PHONY:					all clean fclean re

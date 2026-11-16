@@ -15,7 +15,7 @@ class PhoneBook
 		Contact		contact[8];
 		int			count;
 		int			oldest;
-		void		helper() const;
+		void		displayContact() const;
 
 	public:
 		PhoneBook();

@@ -6,11 +6,11 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 18:37:05 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/11/16 20:26:48 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/11/16 20:54:47 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "PhoneBook.hpp"
+# include "Contact.hpp"
 
 void Contact::set(std::string	firstN, std::string	lname, std::string nickN,
 					std::string pN, std::string darkS)
