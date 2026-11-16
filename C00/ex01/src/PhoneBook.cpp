@@ -6,7 +6,7 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 20:14:40 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/11/16 21:45:29 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/11/16 22:09:20 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 PhoneBook::PhoneBook()	: count(0), oldest(0) {}
 
-static int input_verification(std::string &str, std::string prompt)
+static int input_verification(std::string &str, const std::string prompt)
 {
 	std::string input;
 	bool		checker = true;
@@ -22,7 +22,10 @@ static int input_verification(std::string &str, std::string prompt)
 	while (checker)
 	{
 		if (!(std::getline(std::cin, input)) )
+		{
+			std::cout << std::endl;
 			return (1);
+		}
 		if (input.empty() )
 		{
 			std::cout << "Incorrect input try again." << std::endl;

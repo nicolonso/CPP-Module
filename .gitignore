@@ -2,3 +2,5 @@
 GUIDE/
 *.o
 obj/
+PhoneBook
+megaphone
