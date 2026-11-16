@@ -6,7 +6,7 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 20:14:40 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/11/16 20:58:16 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/11/16 21:45:29 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ static int input_verification(std::string &str, std::string prompt)
 		{
 			std::cout << "Incorrect input try again." << std::endl;
 			std::cout << prompt;
-			checker = true;
 		}
 		else
 			checker = false;
