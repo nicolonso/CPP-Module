@@ -2,36 +2,28 @@
 
 NAME = megaphone
 
-# Compiler
+CXX = c++
+CXXFLAGS = -std=c++98 -Wall -Wextra -Werror
+RM = rm -f
 
-CXXFLAGS 	= -std=c++98 -Wall -Wextra -Werror
-CXX 		= c++
-RM			= rm -f
-
-# Source Files
-SRC			=	megaphone.cpp
-
-# Object files
-
-OBJ			= $(SRC:.cpp=.o)
+SRC = megaphone.cpp
+OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
-$(NAME):	$(OBJ)
-			@$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
-			@echo "Megaphone Compiled"
+$(NAME): $(OBJ)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $@
+	@echo "Megaphone compiled"
 
-			%.o: %.cpp
-			@mkdir -p $(@D)
-			@$(CXX) $(CXXFLAGS) -c $< -o $@
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-			@$(RM) -r $(OBJ)
+	$(RM) $(OBJ)
 
-fclean:		clean
-			@$(RM) $(NAME)
+fclean: clean
+	$(RM) $(NAME)
 
-re:			fclean all
+re: fclean all
 
-.PHONY:		all clean fclean re
-
+.PHONY: all clean fclean re
