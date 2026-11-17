@@ -6,7 +6,14 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/16 23:04:37 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/11/16 23:04:38 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/11/17 19:47:44 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+# include "Zombie.hpp"
+
+int main()
+{
+	std::cout  << "test\n";
+	return (0);
+}
