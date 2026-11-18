@@ -6,7 +6,7 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 18:55:37 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/11/17 23:31:22 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/11/18 00:46:17 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Zombie* newZombie(std::string name)
 {
-	Zombie *newZombie = new Zombie(name);
+	Zombie *createdZombie = new Zombie(name);
 
-	return newZombie;
+	return createdZombie;
 }
