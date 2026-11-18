@@ -6,21 +6,26 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/16 23:04:37 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/11/18 22:19:39 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/11/18 22:30:35 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "Zombie.hpp"
 
 int main()
-{	
-	Zombie *Horde = zombieHorde(10, "Frankenstain");
+{
+	int N = 20;
+
+	Zombie *Horde = zombieHorde( N, "Frankenstain");
 
 	if (!Horde)
 		return (1);
 
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < N; i++)
+	{
+		std::cout << i << ": ";
 		Horde[i].announce();
+	}
 
 	delete[] Horde;
 	
