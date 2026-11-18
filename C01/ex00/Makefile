@@ -1,6 +1,6 @@
 # Makefile
 
-NAME = ZOMBIE
+NAME = zombie
 
 # Directories
 
@@ -12,14 +12,14 @@ OBJ_DIR = obj/
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -I$(INCLUDE)
-RM			= rm -fclean
+RM			= rm -f
 
 # Source files
 
 SRC					= 	$(SRC_DIR)main.cpp \
 						$(SRC_DIR)newZombie.cpp \
 						$(SRC_DIR)randomChump.cpp \
-						$$(SRC_DIR)Zombie.cpp
+						$(SRC_DIR)Zombie.cpp
 
 # Pattern
 
