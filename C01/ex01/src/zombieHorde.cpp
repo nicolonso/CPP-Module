@@ -6,7 +6,7 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/18 00:59:05 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/11/18 01:17:00 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/11/18 22:12:30 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ Zombie* zombieHorde( int N, std::string name )
 	
 	for (int i = 0; i < N; i++)
 		zombiesH[i].set_name( name );
-
+		
 	return zombiesH;
 }
