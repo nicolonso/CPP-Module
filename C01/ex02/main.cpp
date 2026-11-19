@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: nalfonso <nalfonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/18 22:38:22 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/11/18 22:58:33 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/11/19 19:00:34 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ int main()
 	std::string *stringPTR	= &string;
 	std::string &stringREF 	= string;
 
-	std::cout << string << std::endl;
-	std::cout << *stringPTR << std::endl;
-	std::cout << stringREF << std::endl << std::endl;
+	std::cout << "Memory address of the string: " << &string << std::endl;
+	std::cout << "Memory address of the stringPTR: " << stringPTR << std::endl;
+	std::cout << "Memory address of the stringREF: "<< &stringREF << std::endl << std::endl;
 
-	std::cout << string << std::endl;
-	std::cout << *stringPTR << std::endl;
-	std::cout << stringREF << std::endl;
-	
+	std::cout << "Value of the string: " << string << std::endl;
+	std::cout << "Value pointed to by stringPTR: " << *stringPTR << std::endl;
+	std::cout << "Value pointed to by stringREF: "<< stringREF << std::endl << std::endl;
+
 	return (0);
 }
