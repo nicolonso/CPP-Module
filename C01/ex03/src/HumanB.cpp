@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: nalfonso <nalfonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/21 13:37:06 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/11/21 16:39:01 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/11/21 19:39:55 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,16 @@ HumanB::HumanB(std::string name)
 
 HumanB::~HumanB() { }
 
-void	HumanB::setWeapon(Weapon *weapon)
+void	HumanB::setWeapon(Weapon& type)
 {
-	_weapon = weapon;
+	this->_weapon = &type;
 }
 
 void	HumanB::attack()
 {
-	std::cout << this->_name + " attacks with their " + this->_weapon.getType() << std::endl;
+	if (this->_weapon)
+		std::cout << this->_name + " attacks with their " << _weapon->getType() << std::endl;
+	else
+		std::cout << this->_name + " attacks with none" << std::endl;
+	
 }
