@@ -3,26 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nalfonso <nalfonso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 19:53:41 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/11/19 20:19:48 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/11/21 13:47:47 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "Weapon.hpp"
 
+
 Weapon::Weapon() {}
+
+Weapon::Weapon(std::string type) : _type(type) { }
+
 Weapon::~Weapon() {}
 
-const std::string& getType(const std::string X)
+const std::string& Weapon::getType()
 {
-	std::string& type = X;
-
-	return (type);
+	return (this->_type);
 }
 
-void Weapon::setType(const std::string& newType)
+void Weapon::setType(std::string newType)
 {
-	type = newType;
+	this->_type = newType;
 }
