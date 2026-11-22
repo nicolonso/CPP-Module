@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nalfonso <nalfonso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/21 14:07:15 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/11/21 22:50:21 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/11/22 13:41:03 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,42 +16,26 @@
 #include <fstream>
 #include <sstream>
 
-
-void read_and_replace(std::string &file_replace, const std::string s1,const std::string s2)
+int read_and_replace(std::string &file_replace, const std::string& s1,const std::string& s2)
 {
-	std::string		result;
-	bool	found = true;
-
 	if (s1.empty())
-		return ;
+		return (1);
 
-	for (size_t i = 0; i <= file_replace.length() - s1.length(); i++)
+	std::string	result;
+	std::string::size_type pos = 0;
+	std::string::size_type found;
+
+	while ((found = file_replace.find(s1, pos)) != std::string::npos)
 	{
-		if (found)
-		{
-			for (size_t j = 0 ;file_replace[i + j]; j++)
-			{
-				if (file_replace[i + j] != s1[j])
-				{
-					found = false;
-					break;
-				}				
-			}
-		}
-
-		if (found)
-		{
-			result += s2;
-			i += s1.length();
-		}
-		else
-		{
-			result += file_replace[i];
-			i++;
-		}
-		file_replace = result;
+		result += file_replace.substr(pos, found - pos);
+		result += s2;
+		pos = found + s1.length();
 	}
+	result += file_replace.substr(pos);
+	file_replace = result;
+	return (0);
 }
+
 
 int main(int ac, char **av)
 {
@@ -65,9 +49,9 @@ int main(int ac, char **av)
 	std::string s1 = av[2];
 	std::string s2 = av[3];
 	
-	// std::cout << s1 << std::endl;
-	// std::cout << s2 << std::endl;
-	
+	if (s1.empty())
+		return (std::cerr << "Invalid argument" << std::endl, 1);
+
 	if (!file)
 		return (std::cerr << "File error" << std::endl, 1);
 
@@ -76,15 +60,19 @@ int main(int ac, char **av)
 	
 	buffer << file.rdbuf();
 	
-	nameReplace = buffer.str();
+	std::string contents = buffer.str();
 	
-	std::cout << nameReplace << std::endl;
+	if (read_and_replace( contents , s1 , s2))
+		return (std::cerr << "Invalid search string" << std::endl, 1);
 
-	read_and_replace( nameReplace , s1, s2);
+	std::ofstream output((nameReplace + ".replace").c_str());
 
-	std::cout << nameReplace << std::endl;
-
-	file.close(); //What happend if i dont include this?? Because it doesn't include any leaks
+	if (!output)
+		return (std::cerr << "Failed to open output file" << std::endl, 1);
+	output << contents;
+	
+	file.close();
+	output.close();
 
 	return 0;
 }
