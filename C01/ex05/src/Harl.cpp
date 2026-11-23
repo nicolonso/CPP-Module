@@ -6,7 +6,7 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/22 14:05:26 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/11/23 19:35:03 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/11/23 22:24:01 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	Harl::debug( void )
  
 void	Harl::info( void )
 {
-	std::cout << " cannot believe adding extra bacon costs more money. You didn’t put enough bacon in my burger! If you did, I wouldn’t be asking for more!" << std::endl;
+	std::cout << "I cannot believe adding extra bacon costs more money. You didn’t put enough bacon in my burger! If you did, I wouldn’t be asking for more!" << std::endl;
 }
  
 void	Harl::warning( void )
@@ -38,9 +38,26 @@ void	Harl::error( void )
 
 void	Harl::complain(std::string level)
 {
-	std::string	str[4] = { "DEBUG" ,"INFO", "WARNING","ERROR"};
+	std::string	levels[4] = {
+		"DEBUG" ,"INFO", "WARNING","ERROR"
+	};
 
-	void (Harl::*values[4])() = {};
+	void (Harl::*actions[4])() = {
+		&Harl::debug,
+		&Harl::info,
+		&Harl::warning,
+		&Harl::error
+	};
 	
+	for (int i = 0; i < 4; i++)
+	{
+		if (levels[i] == level)
+		{
+			(this->*actions[i])();
+			return ;
+		}
+	}
 	
+	std::cout << "Unknown complaint level" << std::endl;
+
 }
